@@ -95,7 +95,7 @@ click H href "https://platform.openai.com/" _blank
 |-----------------------|-----------------------------|
 | Vision Embedding      | OpenAI CLIP                 |
 | Preferences Integration | Vector-weighted relevance   |
-| Description Search    | Cosine similarity            |
+| Description Search    | FAISS            |
 | Web Search API        | SerpAPI                     |
 | Chatbot               | GPT API                     |
 | Backend               | Flask (Python)              |
@@ -105,6 +105,40 @@ click H href "https://platform.openai.com/" _blank
 
 ---
 
+## 🧠 AI Model & Intelligence Layer
+
+The intelligence behind **StyleFinder** is powered by a combination of state-of-the-art AI models and smart engineering for real-time fashion and product recommendations:
+
+### 1. 🖼️ **CLIP (Contrastive Language-Image Pretraining) by OpenAI**
+
+We use CLIP to extract visual semantics from user-uploaded images. It transforms images into high-dimensional embeddings that capture both visual features and their conceptual meaning. These embeddings are crucial for matching the image with similar items from our product catalog.
+
+* **Why CLIP?**
+  Unlike traditional CNNs, CLIP understands the *semantic* content of an image—e.g., recognizing that a red sleeveless dress and a maroon bodycon dress are similar in function and style.
+
+### 2. 🧭 **FAISS (Facebook AI Similarity Search)**
+
+To efficiently find the closest product match, we use **FAISS**, an optimized similarity search library. After converting both the image and catalog entries into embeddings, FAISS performs a **cosine similarity** search to find the most relevant catalog item in milliseconds.
+
+* **Use Case**: Enables scalable, lightning-fast retrieval from large product databases.
+
+### 3. 🌐 **SerpAPI for Real-World Product Discovery**
+
+Once we identify the most semantically similar catalog description, we query **SerpAPI** to fetch live product results from the web. This bridges the gap between local inference and dynamic global inventory.
+
+* **Use Case**: Converts a static product catalog into a dynamic discovery engine.
+
+### 4. 💬 **GPT-based Chatbot**
+
+Our chatbot leverages the **GPT API** to offer contextual and conversational support. Users can refine their searches (e.g., “Show cheaper alternatives” or “Suggest something more casual”) and receive smart, natural-language responses.
+
+* **Role of GPT**: Acts as an interactive fashion advisor that personalizes the shopping experience through dialogue.
+
+---
+
+This section gives reviewers and readers a solid technical understanding of how your AI stack contributes to the product. If you want, I can also add a visual summary (like a model interaction diagram) or break this up with icons and callouts for clarity.
+
+---
 ## ⚙️ Setup Instructions
 
 ### 🔧 Quick Start
