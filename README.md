@@ -15,26 +15,24 @@
 
 ## 🔧 Key Features
 
-- 📸 **Image-Based Product Discovery**  
-  Upload an image and instantly get similar or complementary fashion items.
-
-- 🧠 **Visual Intelligence via CLIP**  
-  Uses OpenAI's CLIP to extract visual semantics and match it with product catalogs.
-
-- 🔍 **Real-Time Web Search with SerpAPI**  
-  Converts embeddings to product descriptions and fetches actual e-commerce items.
-
-- 💬 **Smart Chatbot Interface**  
-  GPT-powered chatbot refines results, answers queries, and enhances interactivity.
-
-- 🛒 **Cart Integration**  
-  Add items you love directly to the cart — seamless and intuitive.
-
-- 💳 **Secure Checkout with Stripe**  
-  Real or simulated payments through Stripe APIs.
-
-- 🎨 **Personalization Tab**  
-  Feed your preferences and get tailor-made recommendations.
+	•	📸 Image-Based Product Discovery
+Upload any fashion item image to discover similar and visually matching products.
+	•	🧠 Visual Intelligence via Pretrained CLIP
+Leverages OpenAI’s CLIP to convert images into rich semantic embeddings for matching against catalog descriptions.
+	•	🧲 FAISS-Powered Fast Similarity Matching
+Vector similarity search using FAISS to quickly identify the most relevant catalog entries.
+	•	🔍 Real-Time Product Search with SerpAPI
+The top-match product description is sent to SerpAPI to fetch live product results from e-commerce platforms.
+	•	💬 Smart Chatbot Interface
+GPT-powered chatbot refines recommendations, interprets user queries, and handles natural conversations for a richer UX.
+	•	🎨 Preference-Aware Personalization
+Feed in your fashion preferences (style, brand, color) to influence the recommendations at every stage.
+	•	🛒 Intelligent Cart Integration
+Add items to your cart and automatically get:
+	•	Complementary products to complete the look
+	•	Enhanced recommendations refined using cart context
+	•	💳 Secure Checkout with Stripe
+Seamless and safe checkout using real or test Stripe APIs.
 
 ---
 
