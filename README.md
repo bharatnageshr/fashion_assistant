@@ -144,44 +144,40 @@ npm start
 
 ---
 
-## 📂 Project Structure
+# 🗂️ Project Structure
 
-```text
-├── backend/
-│   ├── app.py
-│   └── recommender/
-│       ├── data/
-│       │   ├── catalog.json
-│       │   └── embeddings.npy
-│       ├── model_utils.py
-│       └── build_catalog.py
-├── frontend/
-│   ├── src/
-│   └── public/
-│       └── App.js, Preferences.js, Chatbot.js
-└── README.md
+```
+backend/
+ └── app.py
+     └── recommender/
+         └── data/
+             ├── catalog.json
+             ├── embeddings.npy
+             ├── model_utils.py
+             └── build_catalog.py
+frontend/
+ └── src/
+     └── public/
+         └── App.js, Preferences.js, Chatbot.js
+README.md
+```
 
 ---
 
-## 🌟 Highlights
+## ✨ Highlights
 
 - ✅ **Multimodal AI system** (image + preferences)
 - ✅ **Live product discovery** with SerpAPI
 - ✅ **Chatbot integration** for query handling
 - ✅ **Frontend/Backend separation** with easy setup
-- ✅ **Complementary products and Personalized products at 
----
-
-## 📽️ Demo Video
-
-📎 [To be added]
-
+- ✅ **Complementary products and Personalized products at**
 
 ---
 
-## 🧑‍💻 Team
+## 👥 Team
 
 - Reddi Srujan
 - Bharat Nagesh
 
+---
 ---
