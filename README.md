@@ -41,14 +41,36 @@
 ## 🧱 System Architecture
 ```mermaid
 graph TD
-  A[User Uploads Image] --> B[CLIP Embedding<br>Generation]
-  A2[User Preferences] --> B
-  B --> C[Similarity Matching<br>with Product Catalog]
-  C --> D[Most Relevant<br>Catalog Description]
-  D --> E[Fetch Results via<br>SerpAPI]
-  E --> F[Recommendation Display<br>on Frontend]
-  F --> G[Chatbot for Interaction<br>& Refinement]
-  G --> H[Add to Cart<br>+ Checkout via Stripe]
+  A[User Uploads Image] --> B[Pretrained CLIP<br>Image Embedding]
+  A2[User Preferences / Profile] --> B
+
+  subgraph 🔍 Vector Matching Engine
+    D1[Preprocessed Catalog<br>(Text + Vector Embeddings)]
+    D2[FAISS Index<br>for Fast Similarity Search]
+    D3[CLIP-Text Embeddings<br>of Catalog Items]
+    B --> D2
+    D1 --> D3
+    D3 --> D2
+    D2 --> C[Top-k Similar Items<br>from Catalog]
+  end
+
+  C --> E[Most Relevant<br>Product Description]
+
+  E --> F[Fetch Real-World Matches<br>via SerpAPI]
+
+  F --> G[Frontend: Display Recommendations]
+
+  G --> H[🧠 Chatbot (GPT)<br>User Feedback & Refinement]
+  H --> G
+  H --> I[Modify Search Query<br>or Refine Filters]
+
+  G --> J[🛒 Add to Cart]
+  J --> K[💳 Stripe Checkout]
+
+  click B href "https://openai.com/research/clip" _blank
+  click D2 href "https://github.com/facebookresearch/faiss" _blank
+  click F href "https://serpapi.com/" _blank
+  click H href "https://platform.openai.com/" _blank
 ```
 
 ---
