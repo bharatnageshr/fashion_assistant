@@ -42,12 +42,12 @@
 ```mermaid
 graph TD
   A[User Uploads Image] --> B[Pretrained CLIP Image Embedding]
-  A2[User Preferences / Profile] --> B
+  A2[User Preferences or Profile] --> B
 
-  subgraph "🔍 Vector Matching Engine"
-    D1[Preprocessed Catalog (Text + Vectors)]
-    D3[CLIP-Text Embeddings of Catalog Items]
-    D2[FAISS Index for Fast Similarity Search]
+  subgraph Vector_Matching_Engine
+    D1[Preprocessed Catalog - Text and Vectors]
+    D3[CLIP Text Embeddings of Catalog Items]
+    D2[FAISS Index for Similarity Search]
     B --> D2
     D1 --> D3
     D3 --> D2
@@ -57,7 +57,7 @@ graph TD
   C --> E[Most Relevant Product Description]
   E --> F[Fetch Matches via SerpAPI]
   F --> G[Display Recommendations on Frontend]
-  G --> H[Chatbot (GPT): Feedback & Refinement]
+  G --> H[Chatbot using GPT for Feedback]
   H --> G
   H --> I[Modify Search Query or Filters]
   G --> J[Add to Cart]
