@@ -69,8 +69,7 @@ graph TD
 
 ## ⚙️ Setup Instructions
 # 🔧 Quick Start: How to Use This Codebase
-
-## 1. 🚀 Clone the Repository
+# 🚀 Clone the Repository
 
 ```bash
 git clone https://github.com/bharatnageshr/fashion_assistant.git
@@ -78,32 +77,46 @@ cd shop-smarter
 export SERP_API_KEY=your_serpapi_key
 export STRIPE_SECRET_KEY=your_stripe_key
 
+# On Windows, use:
 set SERP_API_KEY=your_serpapi_key
 set STRIPE_SECRET_KEY=your_stripe_key
+```
 
+---
 
-3. **📦 Install Dependencies**
+## 📦 Install Dependencies
 
-Ensure you have Python 3.8+ and Node.js installed.
+**Ensure you have Python 3.8+ and Node.js installed.**
 
-**Backend:
+### Backend:
+```bash
 cd backend
 python3 -m venv venv
-source venv/bin/activate
+source venv/bin/activate    # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
+```
 
-Frontend:
+### Frontend:
+```bash
 cd ../frontend
 npm install
+```
 
-4. ▶️ Run the Application
-**Backend:**
+---
+
+## ▶️ Run the Application
+
+### Backend:
+```bash
 cd backend
 python app.py
+```
 
-**Frontend:**
+### Frontend:
+```bash
 cd ../frontend
 npm start
+```
 
 ---
 
