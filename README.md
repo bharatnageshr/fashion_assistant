@@ -117,10 +117,16 @@ cd fashion_assistant
 # Set environment variables
 export SERP_API_KEY=your_serpapi_key
 export STRIPE_SECRET_KEY=your_stripe_key
+export OPENAI_API_KEY=your_openaiapi_key
+export FLASK_DEBUG=True
+export OPENROUTER_API_KEY=your_openrouterapi_key
 
 # On Windows:
 set SERP_API_KEY=your_serpapi_key
 set STRIPE_SECRET_KEY=your_stripe_key
+set OPENAI_API_KEY=your_openaiapi_key
+set FLASK_DEBUG=True
+set OPENROUTER_API_KEY=your_openrouterapi_key
 ```
 
 ---
@@ -146,6 +152,13 @@ npm install
 
 ---
 
+## Dataset used for Vectorisation & Fine Tuning
+'''
+https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-small?resource=download
+'''
+
+---
+
 ## ▶️ Run the Application
 
 ### Backend:
@@ -159,8 +172,11 @@ python app.py
 cd ../frontend
 npm start
 ```
-
-> ⚠️ App runs on `http://localhost:3000` (frontend) and `http://localhost:5000` (backend).
+### Open StyleFinderAI
+'''
+Go to:
+http://localhost:5001
+'''
 
 ---
 
@@ -179,7 +195,6 @@ npm start
 ## 🧪 Example Use Cases
 
 - 👗 Upload a photo of a dress → Get similar dresses + accessories.
-- 🛋️ Upload a living room photo → Get matching decor suggestions.
 - 👟 Upload sneaker image → Discover alternatives + gym accessories.
 - 💬 Ask chatbot: “Show cheaper alternatives” or “Match this with jeans.”
 
