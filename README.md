@@ -73,7 +73,7 @@ graph TD
 ## 1. 🚀 Clone the Repository
 
 ```bash
-git clone https://github.com/YourUsername/shop-smarter.git
+git clone https://github.com/bharatnageshr/fashion_assistant.git
 cd shop-smarter
 export SERP_API_KEY=your_serpapi_key
 export STRIPE_SECRET_KEY=your_stripe_key
@@ -133,21 +133,20 @@ npm start
 
 ## 📂 Project Structure
 
-```
+```text
 ├── backend/
 │   ├── app.py
-│   ├── recommender/
-│   ├── data/
-│   │   ├── catalog.json
-│   │   ├── embeddings.npy
-│   ├── model_utils.py
-│   └── build_catalog.py
+│   └── recommender/
+│       ├── data/
+│       │   ├── catalog.json
+│       │   └── embeddings.npy
+│       ├── model_utils.py
+│       └── build_catalog.py
 ├── frontend/
 │   ├── src/
-│   ├── public/
-│   └── App.js, Preferences.js, Chatbot.js
+│   └── public/
+│       └── App.js, Preferences.js, Chatbot.js
 └── README.md
-```
 
 ---
 
