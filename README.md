@@ -41,36 +41,33 @@
 ## 🧱 System Architecture
 ```mermaid
 graph TD
-  A[User Uploads Image] --> B[Pretrained CLIP<br>Image Embedding]
+  A[User Uploads Image] --> B[Pretrained CLIP Image Embedding]
   A2[User Preferences / Profile] --> B
 
-  subgraph 🔍 Vector Matching Engine
-    D1[Preprocessed Catalog<br>(Text + Vector Embeddings)]
-    D2[FAISS Index<br>for Fast Similarity Search]
-    D3[CLIP-Text Embeddings<br>of Catalog Items]
+  subgraph "🔍 Vector Matching Engine"
+    D1[Preprocessed Catalog (Text + Vectors)]
+    D3[CLIP-Text Embeddings of Catalog Items]
+    D2[FAISS Index for Fast Similarity Search]
     B --> D2
     D1 --> D3
     D3 --> D2
-    D2 --> C[Top-k Similar Items<br>from Catalog]
+    D2 --> C[Top-k Similar Items from Catalog]
   end
 
-  C --> E[Most Relevant<br>Product Description]
-
-  E --> F[Fetch Real-World Matches<br>via SerpAPI]
-
-  F --> G[Frontend: Display Recommendations]
-
-  G --> H[🧠 Chatbot (GPT)<br>User Feedback & Refinement]
+  C --> E[Most Relevant Product Description]
+  E --> F[Fetch Matches via SerpAPI]
+  F --> G[Display Recommendations on Frontend]
+  G --> H[Chatbot (GPT): Feedback & Refinement]
   H --> G
-  H --> I[Modify Search Query<br>or Refine Filters]
+  H --> I[Modify Search Query or Filters]
+  G --> J[Add to Cart]
+  J --> K[Stripe Checkout]
 
-  G --> J[🛒 Add to Cart]
-  J --> K[💳 Stripe Checkout]
-
-  click B href "https://openai.com/research/clip" _blank
-  click D2 href "https://github.com/facebookresearch/faiss" _blank
-  click F href "https://serpapi.com/" _blank
-  click H href "https://platform.openai.com/" _blank
+%% Clickable node references (for supported environments like Mermaid Live Editor or Docs)
+click B href "https://openai.com/research/clip" _blank
+click D2 href "https://github.com/facebookresearch/faiss" _blank
+click F href "https://serpapi.com/" _blank
+click H href "https://platform.openai.com/" _blank
 ```
 
 ---
