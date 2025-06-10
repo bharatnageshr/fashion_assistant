@@ -57,11 +57,20 @@ graph TD
   C --> E[Most Relevant Product Description]
   E --> F[Fetch Matches via SerpAPI]
   F --> G[Display Recommendations on Frontend]
+
   G --> H[Chatbot using GPT for Feedback]
   H --> G
   H --> I[Modify Search Query or Filters]
-  G --> J[Add to Cart]
+
+  G --> J[🛒 Add to Cart]
   J --> K[Stripe Checkout]
+
+  %% Personalization and Cart Intelligence
+  J --> L[Trigger Personalization Engine]
+  L --> M[Complementary Product Suggestions]
+  L --> N[Refined Recommendations<br>based on Cart Context]
+  M --> G
+  N --> G
 
 %% Clickable node references (for supported environments like Mermaid Live Editor or Docs)
 click B href "https://openai.com/research/clip" _blank
